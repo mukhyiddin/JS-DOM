@@ -168,10 +168,15 @@
       const removeNone = document.querySelector(".col-12")
       const addNone = document.querySelector(".btn")
 
+      const Username = elInputUsername;
+      const Comment = elInputComment.value;
+
+      const InputUserLabel = document.querySelector('[for=exampleInputEmail1]');
+      const InputCommentLabel = document.querySelector('[for=comment]');
       
       elBtnComment.addEventListener("click", showComment)
       elBtnCancel.addEventListener("click", cancelComment)
-      elBtnSubmit.addEventListener("submit", submitComment)
+      elBtnSubmit.addEventListener("click", submitComment)
 
       function showComment(){
             // elCommentSection.removeChild("class", "d-none")
@@ -185,6 +190,14 @@
       }
       
       function submitComment(){
+        event.preventDefault();
+
+            //alert("Sudah Berhasil Komen");
+            const Message = InputUserLabel.innerHTML + " " + InputCommentLabel.innerHTML
+            console.log(Message);
+
+            removeNone.classList.add("d-none");
+            addNone.classList.remove("d-none");
             
       }
       // EDIT HERE
