@@ -192,6 +192,10 @@
                 const cardImg = document.querySelector(`#card-${cardId}-image`)
                 const modalImg = document.getElementById("modal-image")
           
+                var cardsrc = cardImg.getAttribute("src")
+                var modalsrc = modalImg.setAttribute("src", cardsrc)
+                
+                // modalImg = cardImg
 
                 // cardTitle.setAttribute(`.modal-title`)
             }
