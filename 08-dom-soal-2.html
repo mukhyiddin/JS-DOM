@@ -195,11 +195,12 @@
       function submitComment(){
         event.preventDefault();
 
-            //alert("Sudah Berhasil Komen");
+            
             
             var Username = elInputUsername.value;
             var Comment = elInputComment.value;
-
+            
+            alert("Terima Kasih Sudah Berkomentar : " + Username);
 
             let li = document.createElement('li')
             elCommentList.appendChild(li).innerHTML = `<li
@@ -219,7 +220,12 @@
 
             console.log(Username);
             console.log(Comment);
+            
+            removeNone.classList.add("d-none");
+            addNone.classList.remove("d-none");
 
+            var Username = elInputUsername.value = "";
+            var Comment = elInputComment.value = "";
             
             
       }
