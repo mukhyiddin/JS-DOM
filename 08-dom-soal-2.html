@@ -51,6 +51,7 @@
             class="list-group list-group-flush overflow-auto"
             style="height: 220px"
           >
+          
             <li
               class="
                 list-group-item
@@ -169,14 +170,7 @@
 
       const removeNone = document.querySelector(".col-12")
       const addNone = document.querySelector(".btn")
-
      
-      
-
-      
-      const InputCommentLabel = document.querySelector('[for=comment]');
-      
-
       elBtnComment.addEventListener("click", showComment)
       elBtnCancel.addEventListener("click", cancelComment)
       elBtnSubmit.addEventListener("click", submitComment)
@@ -190,13 +184,14 @@
       function cancelComment(){
             removeNone.classList.add("d-none");
             addNone.classList.remove("d-none");
+
+            var Username = elInputUsername.value = "";
+            var Comment = elInputComment.value = "";
       }
       
       function submitComment(){
         event.preventDefault();
 
-            
-            
             var Username = elInputUsername.value;
             var Comment = elInputComment.value;
             
@@ -227,8 +222,7 @@
             var Username = elInputUsername.value = "";
             var Comment = elInputComment.value = "";
             
-            
-      }
+        }
       // EDIT HERE
 
     </script>
