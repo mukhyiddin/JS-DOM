@@ -173,6 +173,20 @@
       elBtnCancel.addEventListener("click", cancelComment)
       elBtnSubmit.addEventListener("submit", submitComment)
 
+      function showComment(){
+            // elCommentSection.removeChild("class", "d-none")
+            removeNone.classList.remove("d-none");
+            addNone.classList.add("d-none");
+      }
+
+      function cancelComment(){
+            removeNone.classList.add("d-none");
+            addNone.classList.remove("d-none");
+      }
+      
+      function submitComment(){
+            
+      }
       // EDIT HERE
 
     </script>
